@@ -1,11 +1,9 @@
-import './App.css';
-
-function App() {
-  return (
+function App(){
+  return(
     <div className="App">
-    <h1>Hello World! Anish Singh</h1>
+      <h1>Functional Component</h1>
     </div>
-  );
+  )
 }
 
 export default App;
