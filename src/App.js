@@ -1,11 +1,25 @@
-import React from "react";
+//import logo from './logo.svg';
+//import React from 'react';
+import './App.css';
+//import User from './User';
+import React, { Component } from 'react';
+function App(){
+  return(
+    <div className="App">
+      <h1>Hello World</h1>
+      <User/>
+      
+      
+    </div>
+  );
+}
 
-class App extends React.Component{
-  render(){
+class User extends Component
+{
+  render()
+  {
     return(
-      <div className="App">
-        <h1>This is Class Component</h1>
-      </div>
+      <h1>Class component in Single Component </h1>
     )
   }
 }
