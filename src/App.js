@@ -1,16 +1,12 @@
-//import logo from './logo.svg';
 import './App.css';
+import Student from './Student';
 
 function App(){
-  function apple()
-  {
-    alert("function called");
-  }
-  
   return(
     <div className="App">
-      <h1>Hello World !</h1>
-      <button onClick={apple}>Click me</button>
+      <h1>Props</h1>
+     <Student name="vishal" email="vishal@test.com"/>
+  
       </div>
   );
 }
