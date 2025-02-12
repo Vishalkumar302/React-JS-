@@ -2,20 +2,13 @@ import { useState } from 'react';
 function Profile() {
     const [loggedIn] = useState(true)
 
-    if (loggedIn) {
+    
         return (
             <div>
-                <h1>Welcome Vishal</h1>
+                {loggedIn?<h1>Welcome Vishal Ji</h1>:<h1>Welcome guest</h1>}
             </div>
         )
-    }
-    else {
-        return (
-            <div>
-                <h1>Welcome Guest</h1>
-            </div>
-        )
-    }
+   
 }
 export default Profile;
 
