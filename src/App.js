@@ -1,30 +1,32 @@
+import { useState } from 'react';
 import './App.css';
 
-import React, { useState } from 'react';
-
-
 function App(){
-  const [data,setData]=useState(null)
-  const [print,setPrint]=useState(false)
-
-  function getData(val)
+  const [name,setName]=useState("");
+  const [tnc,setTnc]=useState(false);
+  const [interest,setInterest]=useState("");
+  function getFormData(e)
   {
-    console.log(val.target.value)
-    setData(val.target.value)
-    setPrint(false)
+    console.log(name,tnc,interest)
+    e.preventDefault()
   }
-  return(
+  return (
     <div className="App">
-     {
-      print?
-      <h1>{data}</h1>
-      :null
+      <h1>Handle Form in React</h1>
+      <form onSubmit={getFormData}>
+        <input type="text" placeholder="enter name" onChange={(e)=>setName(e.target.value)}/> <br/><br />
+        <select onChange={(e)=>setInterest(e.target.value)}>
+        <option>Selection Options</option>
+        <option>Marvel</option>
+        <option>Dc</option>
+        </select>  <br/><br />     
+        <input type="checkbox" onChange={(e)=>setTnc(e.target.checked)}/> <span>Accept Term And Conditions</span>
+        <br/><br />  
+        <button type="submit">Submit</button>
+       
+        </form>
 
-     }
-      <input type="text" onChange={getData}/>
-      <button onClick={()=>setPrint(true)}>Print Data</button>
-    
-      </div>
-  );
+    </div>
+  )
 }
 export default App;
